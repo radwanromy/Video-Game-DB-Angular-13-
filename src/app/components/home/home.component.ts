@@ -17,7 +17,15 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params: Params)=>);
+    this.activatedRoute.params.subscribe((params: Params)=>
+    {
+      if(params['game-search']){
+        this.searchGames('metacrit',[params['game-search']]);
+      }else{
+        this.searchGames(metacrit);
+      }
+    });
   }
+  searchGames(sort: string, search?:string)
 
 }
