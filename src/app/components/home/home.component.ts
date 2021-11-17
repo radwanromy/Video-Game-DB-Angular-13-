@@ -26,6 +26,13 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-  searchGames(sort: string, search?:string)
+  searchGames(sort: string, search?:string){
+    this.httpService
+    .getGameList(sort,search)
+    .subscribe((gamelist.APIResponse<Game>)=>{
+      this.games = gamelist.results;
+      console.log(gameList);
+       });
+  }
 
 }
