@@ -13,11 +13,12 @@ export interface Game {
     screenshots: Array<Screenshots>;
     trailers: Array<Trailer>;
   }
-    
+  
   export interface APIResponse<T> {
-    results: Array<T>;
-}
-interface Genre {
+      results: Array<T>;
+  }
+  
+  interface Genre {
     name: string;
   }
   
@@ -46,3 +47,4 @@ interface Genre {
       max: string;
     };
   }
+  
